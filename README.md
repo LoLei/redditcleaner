@@ -64,7 +64,7 @@ E.g.
 redditcleaner.clean(text, heading=False)
 ```
 
-#### Pandas Usages
+#### Pandas Usage
 This simulates a common format used when retrieving this type of data via the Reddit API:
 ```python
 
@@ -81,7 +81,7 @@ df = pd.DataFrame([['asdf', 'test_a', test_body_1],
 import redditcleaner
 clean_reddit = lambda x: redditcleaner.clean(x)
 
-# Apply (map) the function on all body columns
+# Apply (map) the function on all body column entries
 df['body'] = df['body'].map(clean_reddit)
 df
 ```
