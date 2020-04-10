@@ -46,7 +46,7 @@ Code block Table: Cell 1.1 Cell 1.2 Cell 2.1 Cell 2.2
 Find the hidden text ... This & that in a normal sentence. "manual quote"
 ```
 
-**Common punctuation, numbers, parentheses, quotation marks etc. are deliberately not removed**, as this data cleaning task pertains to Reddit-specific characters only. A second round of data cleaning can be applied manually to clean these common items.
+:warning: **Common punctuation, numbers, parentheses, quotation marks etc. are deliberately not removed**, as this data cleaning task pertains to Reddit-specific characters only. An additional round of data cleaning can be applied manually to clean these common items or apply lowercasing, or whatever else is needed.
 
 ### Advanced Usage
 The `clean` function supports optional arguments and it can be used as a lambda to be applied on e.g. Pandas DataFrames.
