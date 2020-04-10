@@ -73,7 +73,8 @@ test_body_2 = "Normal text\n\n**Bold**\n\n*Italic*\n\n[Link](https://fsf.org)\n\
 
 import pandas as pd
 df = pd.DataFrame([['asdf', 'test_a', test_body_1],
-                           ['asdf', 'test_b', test_body_2]], columns=list(['id', 'author', 'body']))
+                   ['asdf', 'test_b', test_body_2]],
+                   columns=list(['id', 'author', 'body']))
                            
 # Prepare redditcleaner
 import redditcleaner
