@@ -45,4 +45,4 @@ Code block Table: Cell 1.1 Cell 1.2 Cell 2.1 Cell 2.2
 Find the hidden text ... This & that in a normal sentence. "manual quote"
 ```
 
-Common punctuation, numbers, parentheses, quotation marks etc. are deliberately not removed, as this data cleaning task pertains to Reddit only. A second round of data cleaning can be applied manually to clean these common items.
+Common punctuation, numbers, parentheses, quotation marks etc. are deliberately not removed, as this data cleaning task pertains to Reddit-specific characters only. A second round of data cleaning can be applied manually to clean these common items.
