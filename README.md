@@ -73,7 +73,7 @@ test_body_2 = "Normal text\n\n**Bold**\n\n*Italic*\n\n[Link](https://fsf.org)\n\
 
 import pandas as pd
 df = pd.DataFrame([['asdf', 'test_a', test_body_1],
-                   ['asdf', 'test_b', test_body_2]],
+                   ['fdsa', 'test_b', test_body_2]],
                    columns=list(['id', 'author', 'body']))
                            
 # Prepare redditcleaner
@@ -86,4 +86,4 @@ df['body'] = df['body'].map(clean_reddit)
 |    | id   | author   | body                                                                                                                                                                                                                             |
 |---:|:-----|:---------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  0 | asdf | testa    | Find    the  hidden text ... This & that in a normal sentence. "manual quote"                                                                                                                                                    |
-|  1 | asdf | testb    | Normal text  Bold  Italic    Strike-through  Code  Superscript  Spoiler   Heading  Bullet list:   Item 1  Item 2  Numbered list:  1. Item 1 2. Item 2  Quote      Code block  Table:   Cell 1.1 Cell 1.2       Cell 2.1 Cell 2.2 |
+|  1 | fdsa | testb    | Normal text  Bold  Italic    Strike-through  Code  Superscript  Spoiler   Heading  Bullet list:   Item 1  Item 2  Numbered list:  1. Item 1 2. Item 2  Quote      Code block  Table:   Cell 1.1 Cell 1.2       Cell 2.1 Cell 2.2 |
