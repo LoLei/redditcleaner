@@ -19,7 +19,7 @@ text_cleaned = redditcleaner.clean(text_raw)
 
 ### Input
 
-If Reddit's or Pushshift's API is used to retrieve comments or submissions, the raw comment bodies or submission self texts may look like this:
+If [Reddit's](https://www.reddit.com/dev/api/) or [Pushshift's API](https://github.com/pushshift/api) is used to retrieve comments or submissions, the raw comment bodies or submission self texts may look like this:
 ```
 Normal text\n\n**Bold**\n\n*Italic*\n\n[Link](https://fsf.org)\n\n
 ~~Strike-through~~\n\n`Code`\n\n^(Superscript)
