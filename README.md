@@ -13,7 +13,8 @@ Reddit uses some characters in the raw text of comments and submission selftexts
 
 ```python
 import redditcleaner
-redditcleaner.clean(text)
+text_raw = <Reddit text>
+text_cleaned = redditcleaner.clean(text_raw)
 ```
 
 ### Input
