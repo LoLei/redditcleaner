@@ -89,3 +89,6 @@ df
 |---:|:-----|:---------|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |  0 | asdf | testa    | Find    the  hidden text ... This & that in a normal sentence. "manual quote"                                                                                                                                                    |
 |  1 | fdsa | testb    | Normal text  Bold  Italic    Strike-through  Code  Superscript  Spoiler   Heading  Bullet list:   Item 1  Item 2  Numbered list:  1. Item 1 2. Item 2  Quote      Code block  Table:   Cell 1.1 Cell 1.2       Cell 2.1 Cell 2.2 |
+
+## Contributing
+If I missed any characters that should also be removed, please let me know or feel free to create a PR yourself! :heart:
