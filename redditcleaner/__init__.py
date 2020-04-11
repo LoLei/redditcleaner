@@ -16,27 +16,52 @@ def clean(text, newline=True, quote=True, bullet_point=True,
     Standard punctuation etc is deliberately not removed, can be done in a
     second round manually, or may be preserved in any case.
     """
+    # Newlines (replaced with space to preserve cases like word1\nword2)
     if newline:
-        text = re.sub('\n', ' ', text)                # Newlines
+        text = re.sub(r'\n+', ' ', text)
+
+        # Remove surrounding ' '
+        if text[0] == ' ':
+            text = text[1:]
+        if text[len(text)-1] == ' ':
+            text = text[:-1]
+    # > Quotes
     if quote:
-        text = re.sub(r'\"?\\?&?gt;?', '', text)      # > Quotes
+        text = re.sub(r'\"?\\?&?gt;?', '', text)
+
+    # Bullet points/asterisk (bold/italic)
     if bullet_point:
-        text = re.sub(r'\*', '', text)                # Bullet points or asterisk in general (bold/italic)
-        text = re.sub('&amp;#x200B;', '', text)       # Bullet points
+        text = re.sub(r'\*', '', text)
+        text = re.sub('&amp;#x200B;', '', text)
+
+    # []() Link (Also removes the hyperlink)
     if link:
-        text = re.sub(r'\[.*?\]\(.*?\)', '', text)    # []() Links
+        text = re.sub(r'\[.*?\]\(.*?\)', '', text)
+
+    # Strikethrough
     if strikethrough:
-        text = re.sub('~', '', text)                  # Strike-through
+        text = re.sub('~', '', text)
+
+    # Spoiler, which is used with < less-than (Preserves the text)
     if spoiler:
-        text = re.sub('&lt;', '', text)               # < Less-than (Used in spoiler-tag)
-        text = re.sub(r'!(.*?)!', r'\1', text)        # Spoiler
+        text = re.sub('&lt;', '', text)
+        text = re.sub(r'!(.*?)!', r'\1', text)
+
+    # Code, inline and block
     if code:
-        text = re.sub('`', '', text)                  # Code
+        text = re.sub('`', '', text)
+
+    # Superscript (Preserves the text)
     if superscript:
-        text = re.sub(r'\^\((.*?)\)', r'\1', text)    # Superscript
+        text = re.sub(r'\^\((.*?)\)', r'\1', text)
+
+    # Table
     if table:
-        text = re.sub(r'\|', ' ', text)               # Table
-        text = re.sub(':-', '', text)                 # Table
+        text = re.sub(r'\|', ' ', text)
+        text = re.sub(':-', '', text)
+
+    # Heading
     if heading:
-        text = re.sub('#', '', text)                  # Heading
+        text = re.sub('#', '', text)
+
     return text
