@@ -79,10 +79,9 @@ df = pd.DataFrame([['asdf', 'test_a', test_body_1],
                            
 # Prepare redditcleaner
 import redditcleaner
-clean_reddit = lambda x: redditcleaner.clean(x)
 
 # Apply (map) the function on all body column entries
-df['body'] = df['body'].map(clean_reddit)
+df['body'] = df['body'].map(redditcleaner.clean)
 df
 ```
 |    | id   | author   | body                                                                                                                                                                                                                             |
