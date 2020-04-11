@@ -21,10 +21,7 @@ def clean(text, newline=True, quote=True, bullet_point=True,
         text = re.sub(r'\n+', ' ', text)
 
         # Remove surrounding ' '
-        if text[0] == ' ':
-            text = text[1:]
-        if text[len(text)-1] == ' ':
-            text = text[:-1]
+        text = text.strip()
     # > Quotes
     if quote:
         text = re.sub(r'\"?\\?&?gt;?', '', text)
