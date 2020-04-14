@@ -5,7 +5,7 @@ LONG_DESC = open('README.md').read()
 
 setuptools.setup(
     name="redditcleaner",
-    version="1.1.1",
+    version="1.1.2",
     author="Lorenz Leitner",
     author_email="lrnz.ltnr@gmail.com",
     description="Clean Reddit Text Data",

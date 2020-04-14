@@ -20,8 +20,10 @@ def clean(text, newline=True, quote=True, bullet_point=True,
     if newline:
         text = re.sub(r'\n+', ' ', text)
 
-        # Remove surrounding ' '
+        # Remove resulting ' '
         text = text.strip()
+        text = re.sub(r'\s\s+', ' ', text)
+
     # > Quotes
     if quote:
         text = re.sub(r'\"?\\?&?gt;?', '', text)
