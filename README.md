@@ -31,7 +31,7 @@ Code block\n\nTable:\n\n|Cell 1.1|Cell 1.2|\n|:-|:-|\n|Cell 2.1|Cell 2.2|
 This & that in a normal sentence. "manual quote"
 ```
 
-These characters stem from (Reddit-specific) Markdown formatting.
+These characters stem from (Reddit-specific) Markdown formatting. See [here](https://i.imgur.com/pWreKRA.png) how the first bit looks like on Reddit.
 
 ### Output
 
